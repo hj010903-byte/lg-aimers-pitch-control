@@ -1,0 +1,87 @@
+{
+  "reference_artifact": {
+    "name": "ours_v251_sharpen_submit.zip",
+    "sha256": "f28306e05af625f75fc5e111de1ea2414c8760a5803892a4eb3984cddedff4af",
+    "leaderboard_score": 1152.3953935303,
+    "role": "verified_public_reference",
+    "is_final_competition_artifact": false
+  },
+  "competition_result": {
+    "rank": 67,
+    "participants": 1906,
+    "top_percent_approx": 3.5,
+    "final_leaderboard_score": 1159.52968,
+    "same_artifact_as_reference": false
+  },
+  "ensemble": {
+    "raw_weight_sum": 3.082321702409728,
+    "raw_weights": {
+      "cat_deep": 0.3327,
+      "cat_s7": 0.1668,
+      "lgbm": 0.1668,
+      "lgb_dart": 0.1668,
+      "mlp_deep": 0.7388840682289614,
+      "ftt72": 1.5103376341807668
+    },
+    "normalized_weights": {
+      "cat_deep": 0.10793811682275035,
+      "cat_s7": 0.05411505225739333,
+      "lgbm": 0.05411505225739333,
+      "lgb_dart": 0.05411505225739333,
+      "mlp_deep": 0.23971672640506966,
+      "ftt72": 0.49000000000000005
+    }
+  },
+  "overlays": {
+    "tm_auto5": {
+      "enabled": false,
+      "scale": 1.0,
+      "documented_gamma": 0.0
+    },
+    "structural_state": {
+      "enabled": true,
+      "scale": 1.0
+    },
+    "forward_expert": {
+      "enabled": true,
+      "scale": 1.0
+    },
+    "pitcher_state": {
+      "enabled": true,
+      "scale": 1.0,
+      "documented_beta": 0.402818037135278
+    },
+    "log5_pitcher_state": {
+      "enabled": true,
+      "scale": 1.0,
+      "documented_gamma": 0.14
+    },
+    "v156_residual": {
+      "enabled": true,
+      "scale": 1.0
+    },
+    "v224_offset": {
+      "enabled": true,
+      "scale": 1.0,
+      "clip": 0.05,
+      "documented_gamma": 0.409547979912571,
+      "documented_center": 0.007992297949151718
+    }
+  },
+  "final_logit_sharpen": {
+    "pivot_logit": 0.0312507265,
+    "factor": 1.01
+  },
+  "pipeline_order": [
+    "weighted_base_ensemble",
+    "tm_auto5",
+    "structural_state",
+    "forward_expert",
+    "pitcher_state",
+    "log5_pitcher_state",
+    "v156_residual",
+    "v224_offset",
+    "pivot_logit_sharpen"
+  ],
+  "residual_input_contract": "Each public pipeline residual array represents the final deployment-scaled probability delta. Documented beta and gamma values are provenance metadata and are not applied a second time."
+}
